@@ -1,5 +1,3 @@
-@dd($moviesList)
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +11,14 @@
 
 <body>
     <h1>Laravel Template</h1>
+
+    <div>
+        <ul>
+            @foreach ($moviesList as $movie)
+                <li> {{ $movie['title'] }}</li>
+            @endforeach
+        </ul>
+    </div>
 
     {{-- Example tag for images --}}
     {{-- <img src="{{ Vite::asset('resources/img/logo.png') }}" alt=""> --}}
