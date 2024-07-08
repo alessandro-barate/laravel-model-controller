@@ -1,3 +1,5 @@
+@dd($moviesList)
+
 <!DOCTYPE html>
 <html lang="en">
 
