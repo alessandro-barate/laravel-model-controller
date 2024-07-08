@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    //
+    // Function to retrieve the database's movies
+    public function index()
+    {
+    }
 }
