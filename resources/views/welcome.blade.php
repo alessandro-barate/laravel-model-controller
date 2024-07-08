@@ -9,18 +9,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <title>Movies DB with Laravel</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <h1 class="text-center py-5">Questo è un piccolo database di film</h1>
             @foreach ($moviesList as $movie)
-                <div class="col-4 text-center my-3">
-                    <h3>{{ $movie->title }}</h3>
+                <div class="col-3 text-center m-2 py-3 my-card">
+                    <h3 class="pb-4">{{ $movie->title }}</h3>
                     <p>{{ $movie->original_title }}</p>
-                    <p>{{ $movie->nationality }}</p>
+                    <p>{{ ucfirst($movie->nationality) }}</p>
                     <p>{{ $movie->date }}</p>
                     @if ($movie->vote >= 9)
                         <p><i class="fas fa-star"></i> {{ $movie->vote }}</p>
