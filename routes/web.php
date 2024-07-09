@@ -19,4 +19,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Route redirection to PageController
-Route::get('/', [PageController::class, 'index']);
+Route::get('/', [PageController::class, 'index'])->name('home');
